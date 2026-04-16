@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de asistencia</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f3f6fb;
+            color: #1f2937;
+        }
+
+        main {
+            max-width: 760px;
+            margin: 40px auto;
+            padding: 28px;
+            background: #ffffff;
+            border: 1px solid #d8dee9;
+            border-radius: 8px;
+        }
+
+        h1 {
+            margin-top: 0;
+            color: #0f4c81;
+        }
+
+        form {
+            display: grid;
+            gap: 16px;
+        }
+
+        p {
+            margin: 0;
+            display: grid;
+            gap: 6px;
+        }
+
+        label {
+            font-weight: 700;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            border: 1px solid #b8c2d1;
+            border-radius: 6px;
+            font: inherit;
+        }
+
+        input[type="checkbox"] {
+            width: auto;
+        }
+
+        button,
+        a {
+            width: fit-content;
+            padding: 11px 18px;
+            border-radius: 6px;
+            border: 0;
+            background: #0f4c81;
+            color: #ffffff;
+            font-weight: 700;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .nav {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="nav">
+            <a href="{% url 'asistencia_formulario' %}">Asistencia</a>
+            <a href="{% url 'solicitudes_formulario' %}">Solicitudes</a>
+        </div>
+
+        <h1>Registro de asistencia</h1>
+
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Guardar asistencia</button>
+        </form>
+    </main>
+</body>
+</html>
