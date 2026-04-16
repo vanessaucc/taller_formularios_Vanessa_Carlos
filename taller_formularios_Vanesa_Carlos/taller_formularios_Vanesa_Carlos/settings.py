@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-=-p$8kbv2$#*yo01n-0q&*3))wsjvb7c6dgey5nctoivcxh_$^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'testserver']
 
 
 # Application definition
@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'asistencia',
+    'solicitudes',
 ]
 
 MIDDLEWARE = [
@@ -115,3 +117,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+MEDIA_URL = 'media/'
+MEDIA_ROOT = BASE_DIR / 'media'
