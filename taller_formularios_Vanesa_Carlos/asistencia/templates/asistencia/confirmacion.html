@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistencia registrada</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f3f6fb;
+            color: #1f2937;
+        }
+
+        main {
+            max-width: 720px;
+            margin: 60px auto;
+            padding: 32px;
+            background: #ffffff;
+            border: 1px solid #d8dee9;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #0f4c81;
+        }
+
+        a {
+            display: inline-block;
+            margin: 8px;
+            padding: 11px 18px;
+            border-radius: 6px;
+            background: #0f4c81;
+            color: #ffffff;
+            font-weight: 700;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Asistencia registrada correctamente</h1>
+        <p>El registro fue guardado en la base de datos.</p>
+        <a href="{% url 'asistencia_formulario' %}">Registrar otra asistencia</a>
+        <a href="{% url 'solicitudes_formulario' %}">Ir a solicitudes</a>
+    </main>
+</body>
+</html>
